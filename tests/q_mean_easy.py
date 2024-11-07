@@ -8,8 +8,7 @@ test = {
         {
           'code': r"""
           >>> # You need to set the value for 'mean_easy'
-          >>> 'mean_easy' in vars()
-          True
+          >>> assert 'mean_easy' in vars()
           """,
           'hidden': False,
           'locked': False
@@ -18,8 +17,7 @@ test = {
           'code': r"""
           >>> # You haven't changed the value for 'mean_easy'
           >>> # from its initial state (of ...)
-          >>> mean_easy is not ...
-          True
+          >>> assert mean_easy is not ...
           """,
           'hidden': False,
           'locked': False
@@ -27,8 +25,7 @@ test = {
         {
           'code': r"""
           >>> # Ooh - close - but - is the starting value for "total" correct?
-          >>> mean_easy < 3.7
-          True
+          >>> assert mean_easy < 3.7
           """,
           'hidden': False,
           'locked': False
@@ -36,8 +33,7 @@ test = {
         {
           'code': r"""
           >>> # Not quite there.
-          >>> 3.6073 < mean_easy < 3.6074
-          True
+          >>> assert 3.6073 < mean_easy < 3.6074
           """,
           'hidden': False,
           'locked': False

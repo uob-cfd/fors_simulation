@@ -10,8 +10,7 @@ test = {
         {
           'code': r"""
           >>> # Proportions should be an array.
-          >>> isinstance(proportions, np.ndarray)
-          True
+          >>> assert isinstance(proportions, np.ndarray)
           """,
           'hidden': False,
           'locked': False
@@ -20,8 +19,7 @@ test = {
           'code': r"""
           >>> # You haven't changed the value for 'proportions'
           >>> # from its initial state (of an array of zeros).
-          >>> np.all(proportions == 0)
-          False
+          >>> assert np.any(proportions != 0)
           """,
           'hidden': False,
           'locked': False
@@ -29,8 +27,7 @@ test = {
         {
           'code': r"""
           >>> # proportions should have 10000 values.
-          >>> len(proportions) == 10000
-          True
+          >>> assert len(proportions) == 10000
           """,
           'hidden': False,
           'locked': False
@@ -38,10 +35,8 @@ test = {
         {
           'code': r"""
           >>> # All values in proportions should be in this range.
-          >>> np.all(proportions > 0.219)
-          True
-          >>> np.all(proportions < 0.781)
-          True
+          >>> assert np.all(proportions > 0.219)
+          >>> assert np.all(proportions < 0.781)
           """,
           'hidden': False,
           'locked': False

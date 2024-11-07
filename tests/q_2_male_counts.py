@@ -10,8 +10,7 @@ test = {
         {
           'code': r"""
           >>> # male_counts should be an array.
-          >>> isinstance(male_counts, np.ndarray)
-          True
+          >>> assert isinstance(male_counts, np.ndarray)
           """,
           'hidden': False,
           'locked': False
@@ -19,8 +18,7 @@ test = {
         {
           'code': r"""
           >>> # male_counts should have 10000 values.
-          >>> len(male_counts) == 10000
-          True
+          >>> assert len(male_counts) == 10000
           """,
           'hidden': False,
           'locked': False
@@ -28,10 +26,7 @@ test = {
         {
           'code': r"""
           >>> # All values in male_counts should be in this range.
-          >>> np.all(male_counts > 4730)
-          True
-          >>> np.all(male_counts < 5190)
-          True
+          >>> assert np.all((male_counts > 4730) & (male_counts < 5190))
           """,
           'hidden': False,
           'locked': False

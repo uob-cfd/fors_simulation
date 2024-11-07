@@ -8,8 +8,7 @@ test = {
         {
           'code': r"""
           >>> # You will need to define a "total1" variable.
-          >>> 'total1' in vars()
-          True
+          >>> assert 'total1' in vars()
           """,
           'hidden': False,
           'locked': False
@@ -17,8 +16,7 @@ test = {
         {
           'code': r"""
           >>> # Oops - did you accidentally include 13?
-          >>> total1 != 91
-          True
+          >>> assert total1 != 91
           """,
           'hidden': False,
           'locked': False
@@ -26,8 +24,7 @@ test = {
         {
           'code': r"""
           >>> # Not there yet...
-          >>> total1 == 78
-          True
+          >>> assert total1 == 78
           """,
           'hidden': False,
           'locked': False

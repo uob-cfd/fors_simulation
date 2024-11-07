@@ -8,8 +8,7 @@ test = {
         {
           'code': r"""
           >>> # You need to set the value for 'm_to_all_ratio'
-          >>> 'm_to_all_ratio' in vars()
-          True
+          >>> assert 'm_to_all_ratio' in vars()
           """,
           'hidden': False,
           'locked': False
@@ -18,8 +17,7 @@ test = {
           'code': r"""
           >>> # You haven't changed the value for 'm_to_all_ratio'
           >>> # from its initial state (of ...)
-          >>> m_to_all_ratio is not ...
-          True
+          >>> assert m_to_all_ratio is not ...
           """,
           'hidden': False,
           'locked': False
@@ -27,16 +25,14 @@ test = {
         {
           'code': r"""
           >>> # There were more boys born than girls.
-          >>> m_to_all_ratio > 0.5
-          True
+          >>> assert m_to_all_ratio > 0.5
           """,
           'hidden': False,
           'locked': False
         },
         {
           'code': r"""
-          >>> 0.5161 < m_to_all_ratio < 0.51615
-          True
+          >>> assert 0.5161 < m_to_all_ratio < 0.51615
           """,
           'hidden': False,
           'locked': False

@@ -8,8 +8,7 @@ test = {
         {
           'code': r"""
           >>> # You need to set the value for 'courses'
-          >>> 'courses' in vars()
-          True
+          >>> assert 'courses' in vars()
           """,
           'hidden': False,
           'locked': False
@@ -18,8 +17,7 @@ test = {
           'code': r"""
           >>> # You haven't changed the value for 'courses'
           >>> # from its initial state (of ...)
-          >>> courses is not ...
-          True
+          >>> assert courses is not ...
           """,
           'hidden': False,
           'locked': False
@@ -27,8 +25,7 @@ test = {
         {
           'code': r"""
           >>> # Courses should be a data frame
-          >>> isinstance(courses, pd.DataFrame)
-          True
+          >>> assert isinstance(courses, pd.DataFrame)
           """,
           'hidden': False,
           'locked': False
@@ -36,8 +33,7 @@ test = {
         {
           'code': r"""
           >>> # Courses should have 75 rows.
-          >>> len(courses) == 75
-          True
+          >>> assert len(courses) == 75
           """,
           'hidden': False,
           'locked': False

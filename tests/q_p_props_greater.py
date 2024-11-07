@@ -8,8 +8,7 @@ test = {
         {
           'code': r"""
           >>> # You need to set the value for 'p_props_greater'
-          >>> 'p_props_greater' in vars()
-          True
+          >>> assert 'p_props_greater' in vars()
           """,
           'hidden': False,
           'locked': False
@@ -18,8 +17,7 @@ test = {
           'code': r"""
           >>> # You haven't changed the value for 'p_props_greater'
           >>> # from its initial state (of ...)
-          >>> p_props_greater is not ...
-          True
+          >>> assert p_props_greater is not ...
           """,
           'hidden': False,
           'locked': False
@@ -27,8 +25,7 @@ test = {
         {
           'code': r"""
           >>> # p_props_greater should be a proportion.
-          >>> 0 <= p_props_greater <= 1
-          True
+          >>> assert 0 <= p_props_greater <= 1
           """,
           'hidden': False,
           'locked': False
@@ -36,8 +33,7 @@ test = {
         {
           'code': r"""
           >>> # The chances are very very low
-          >>> p_props_greater < 0.00001
-          True
+          >>> assert p_props_greater < 0.00001
           """,
           'hidden': False,
           'locked': False

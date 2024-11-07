@@ -7,8 +7,7 @@ test = {
         {
           'code': r"""
           >>> # You need to set the value for 'p_males_gte'
-          >>> 'p_males_gte' in vars()
-          True
+          >>> assert 'p_males_gte' in vars()
           """,
           'hidden': False,
           'locked': False
@@ -17,8 +16,7 @@ test = {
           'code': r"""
           >>> # You haven't changed the value for 'p_males_gte'
           >>> # from its initial state (of ...)
-          >>> p_males_gte is not ...
-          True
+          >>> assert p_males_gte is not ...
           """,
           'hidden': False,
           'locked': False
@@ -26,8 +24,7 @@ test = {
         {
           'code': r"""
           >>> # p_males_gte should be a proportion
-          >>> 0 <= p_males_gte <= 1
-          True
+          >>> assert 0 <= p_males_gte <= 1
           """,
           'hidden': False,
           'locked': False
@@ -35,8 +32,7 @@ test = {
         {
           'code': r"""
           >>> # The proportion will be small
-          >>> 0 <= p_males_gte <= 0.001
-          True
+          >>> assert 0 <= p_males_gte <= 0.001
           """,
           'hidden': False,
           'locked': False
@@ -44,8 +40,7 @@ test = {
         {
           'code': r"""
           >>> # Really small
-          >>> 0 <= p_males_gte <= 0.00001
-          True
+          >>> assert 0 <= p_males_gte <= 0.00001
           """,
           'hidden': False,
           'locked': False

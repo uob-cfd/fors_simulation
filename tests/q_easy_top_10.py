@@ -7,8 +7,7 @@ test = {
         {
           'code': r"""
           >>> # You need to set the value for 'easy_top_10'
-          >>> 'easy_top_10' in vars()
-          True
+          >>> assert 'easy_top_10' in vars()
           """,
           'hidden': False,
           'locked': False
@@ -17,8 +16,7 @@ test = {
           'code': r"""
           >>> # You haven't changed the value for 'easy_top_10'
           >>> # from its initial state (of ...)
-          >>> easy_top_10 is not ...
-          True
+          >>> assert easy_top_10 is not ...
           """,
           'hidden': False,
           'locked': False
@@ -26,8 +24,7 @@ test = {
         {
           'code': r"""
           >>> # easy_top_10 should be a data frame
-          >>> isinstance(easy_top_10, pd.DataFrame)
-          True
+          >>> assert isinstance(easy_top_10, pd.DataFrame)
           """,
           'hidden': False,
           'locked': False
@@ -35,8 +32,7 @@ test = {
         {
           'code': r"""
           >>> # easy_top_10 should have 10 rows.
-          >>> len(easy_top_10) == 10
-          True
+          >>> assert len(easy_top_10) == 10
           """,
           'hidden': False,
           'locked': False
@@ -45,8 +41,7 @@ test = {
           'code': r"""
           >>> # easy_top_10 should be sorted, easiest first.
           >>> all_easy = np.sort(courses['Easiness'])[::-1]
-          >>> np.all(easy_top_10['Easiness'] == all_easy[:10])
-          True
+          >>> assert np.all(easy_top_10['Easiness'] == all_easy[:10])
           """,
           'hidden': False,
           'locked': False

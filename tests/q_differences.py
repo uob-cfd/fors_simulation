@@ -8,8 +8,7 @@ test = {
         {
           'code': r"""
           >>> # You need to make a column called 'Difference'
-          >>> 'Difference' in list(christenings)
-          True
+          >>> assert 'Difference' in list(christenings)
           """,
           'hidden': False,
           'locked': False
@@ -17,10 +16,8 @@ test = {
         {
           'code': r"""
           >>> # The first two values should be 532 and 401
-          >>> christenings.loc[0, 'Difference'] == 535
-          True
-          >>> christenings.loc[1, 'Difference'] == 401
-          True
+          >>> assert christenings.loc[0, 'Difference'] == 535
+          >>> assert christenings.loc[1, 'Difference'] == 401
           """,
           'hidden': False,
           'locked': False
@@ -28,8 +25,7 @@ test = {
         {
           'code': r"""
           >>> # Nearly there ..
-          >>> np.sum(christenings['Difference']) == 30224
-          True
+          >>> assert np.sum(christenings['Difference']) == 30224
           """,
           'hidden': False,
           'locked': False

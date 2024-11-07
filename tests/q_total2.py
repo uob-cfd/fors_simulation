@@ -9,8 +9,7 @@ test = {
           'code': r"""
           >>> # You haven't changed the value for 'total2'
           >>> # from its initial state (of 1)
-          >>> total2 != 1
-          True
+          >>> assert total2 != 1
           """,
           'hidden': False,
           'locked': False
@@ -18,8 +17,7 @@ test = {
         {
           'code': r"""
           >>> # Not there yet...
-          >>> total2 == 1814400
-          True
+          >>> assert total2 == 1814400
           """,
           'hidden': False,
           'locked': False

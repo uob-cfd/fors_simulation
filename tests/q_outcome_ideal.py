@@ -7,8 +7,7 @@ test = {
         {
           'code': r"""
           >>> # You need to set the value for 'likely_outcome_from_ideal'
-          >>> 'likely_outcome_from_ideal' in vars()
-          True
+          >>> assert 'likely_outcome_from_ideal' in vars()
           """,
           'hidden': False,
           'locked': False
@@ -17,8 +16,7 @@ test = {
           'code': r"""
           >>> # You haven't changed the value for 'likely_outcome_from_ideal'
           >>> # from its initial state (of ...)
-          >>> likely_outcome_from_ideal is not ...
-          True
+          >>> assert likely_outcome_from_ideal is not ...
           """,
           'hidden': False,
           'locked': False
@@ -26,8 +24,7 @@ test = {
         {
           'code': r"""
           >>> # Value should be from 1 through 5.
-          >>> 1 <= likely_outcome_from_ideal <= 5
-          True
+          >>> assert 1 <= likely_outcome_from_ideal <= 5
           """,
           'hidden': False,
           'locked': False
